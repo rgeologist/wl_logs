@@ -254,50 +254,5 @@ class Wlogs_plot():
     #----Main
 if __name__ == '__main__':
     
-    # from wlogsplt import Wlogs_plot
-    import bh_image as bhi
-    
-    cal = pd.read_csv(r'C:\Users\Raymi Castilla\temp\Caliper.txt',
-                      index_col=0,skiprows=[0,1], names=['cal'],
-                      squeeze=True)
-    
-    path = r'C:\Users\Raymi Castilla\00-Work\Bedretto_Local\Data\WL_logging'
-    
-    # path += r'\MB5\ATV\ASCII\MB5_SGR_ABI_up_cent_20210322.zip'
-    # filename = 'Amplitude-HS.wax'  
-    
-    # path += r'\CB1\OTV\ASCII\CB1_20191022_OTV_zcorr_GES.zip'
-    # filename = 'Image_HS.wag'
-    
-    
-    path += r'\MB4\ATV\ASCII\MB4_20200527_ATV_UP_full_run.zip'
-    filename = '20200527-ATV-Amp-HS.wax'
-    
-    start_md=181
-    end_md=185
-    
-    func = bhi.BHImage.from_file
-    args = (path,)
-    kwargs = dict(filename=filename, start_md=start_md, end_md=end_md,
-                  image_type='single_array', skiprows=1)
-    
-    wlog = Wlogs_plot([[dict(func=func, args=args, kwargs=kwargs)]])    
-    plot_params_lst = [[dict()]]
-    
-    # wlog = Wlogs_plot([[dict(func=func, args=args, kwargs=kwargs),
-    #                     cal.loc[30:32]],[cal.loc[start_md:end_md]]])
-    #define ploting params
-    atv = dict(cmap='hot')
-    otv = dict()
-    cal_kw = dict(color='tab:red')
-    
-    # plot_params_lst = [[atv,cal_kw],[{}]]
-    # plot_params_lst = [[otv,cal_kw],[{}]]
-    
-    
-    wlog.plot(plot_kws=plot_params_lst)
-    # wlog.set_tracks_width(auto=True, width=0.25, left_pad=0.1)
-    # wlog.unify_y_scale()
-    # wlog.axes_grid[0][0].set_ylim(60,50)
-        
-    
+    pass
+
